@@ -1,0 +1,14 @@
+language: cpp
+install: g++ automake make libpcap-dev
+compiler:
+  - gcc
+script: |
+  touch config.h
+  autoreconf
+  ./configure --prefix=/usr \
+        --sbindir=/usr/bin \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib
+  make
+  mkdir ~/DESTDIR
+  make "DESTDIR=~/DESTDIR" install
