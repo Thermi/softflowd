@@ -18,4 +18,4 @@ script: |
   make
   mkdir ~/DESTDIR
   make "DESTDIR=~/DESTDIR" install
-  find "~/DESTDIR"
+  find ~/DESTDIR
