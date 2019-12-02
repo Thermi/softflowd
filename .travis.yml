@@ -1,5 +1,11 @@
 language: cpp
-install: g++ automake make libpcap-dev
+addons:
+  apt:
+    packages:
+      - g++
+      - automake
+      - make
+      - libpcap-dev
 compiler:
   - gcc
 script: |
